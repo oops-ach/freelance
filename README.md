@@ -72,7 +72,7 @@ npm install @openzeppelin/contracts
 mkdir frontend
 cd frontend
 
-# Initialize Vite + React
+# Initialize React
 npm create vite@latest . -- --template react
 # Select: Yes to proceed, React, JavaScript
 
@@ -80,7 +80,7 @@ npm create vite@latest . -- --template react
 npm install
 npm install ethers@6
 
-# Create src directory structure
+# Create src directory 
 mkdir src
 
 
@@ -113,8 +113,8 @@ FreelanceMarketplace deployed to: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
 Open `frontend/src/web3Service.js` and update the contract addresses:
 
 ```javascript
-let TOKEN_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";  // Your token address
-let MARKETPLACE_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";  // Your marketplace address
+let TOKEN_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";  
+let MARKETPLACE_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";  
 ```
 
 ### Step 4: Setup MetaMask
