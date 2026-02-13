@@ -20,7 +20,7 @@ async function main() {
 
   // 3. Transfer ownership so Marketplace can mint rewards
   console.log("\nTransferring token ownership to marketplace...");
-  // This requires FreelanceToken to inherit "Ownable"
+  "
   await token.transferOwnership(marketplaceAddress);
   console.log("Token ownership transferred!");
 
