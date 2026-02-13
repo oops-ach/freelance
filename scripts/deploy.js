@@ -3,7 +3,6 @@ import hre from "hardhat";
 async function main() {
   console.log("Starting deployment...\n");
 
-  // 1. Deploy FreelanceToken
   console.log("Deploying FreelanceToken...");
   const FreelanceToken = await hre.ethers.getContractFactory("FreelanceToken");
   const token = await FreelanceToken.deploy();

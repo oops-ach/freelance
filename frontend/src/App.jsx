@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   const [account, setAccount] = useState(null);
   const [rewardBalance, setRewardBalance] = useState('0');
-  const [viewMode, setViewMode] = useState('home'); // 'home', 'client', 'freelancer'
+  const [viewMode, setViewMode] = useState('home'); 
   const [isLoading, setIsLoading] = useState(false);
 
   // Connect Wallet Handler
