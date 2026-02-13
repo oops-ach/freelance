@@ -121,7 +121,7 @@ contract FreelanceMarketplace {
     
     /**
      * @dev Get project details
-     * @param _projectId ID of the project
+     * @param _projectId 
      */
     function getProject(uint256 _projectId) external view returns (
         uint256 id,
