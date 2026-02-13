@@ -2,14 +2,14 @@
 
 A blockchain-based freelance marketplace built with Solidity, Hardhat, React, and Ethers.js.
 
-## 📋 Project Overview
+## Project Overview
 
 FreelanceX is a decentralized application (DApp) that allows:
 - **Clients** to post projects and hire freelancers
 - **Freelancers** to browse and accept available jobs
 - **Automatic rewards** in FLX tokens for both parties upon project completion
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Blockchain:** Ethereum (Hardhat local network)
 - **Smart Contracts:** Solidity 0.8.20
@@ -17,31 +17,35 @@ FreelanceX is a decentralized application (DApp) that allows:
 - **Web3 Library:** Ethers.js v6
 - **Wallet:** MetaMask
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FreelanceX/
-├── contracts/
-│   ├── FreelanceToken.sol          # ERC-20 reward token
-│   └── FreelanceMarketplace.sol    # Main marketplace contract
-├── scripts/
-│   └── deploy.js                   # Deployment script
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx                 # Main app component
-│   │   ├── ClientDashboard.jsx     # Client view
-│   │   ├── FreelancerDashboard.jsx # Freelancer view
-│   │   ├── web3Service.js          # Blockchain interaction API
-│   │   ├── main.jsx                # React entry point
-│   │   └── App.css                 # Styling
-│   ├── index.html
-│   ├── vite.config.js
-│   └── package.json
-├── hardhat.config.js
-└── package.json
+|--- contracts/
+│   |--- FreelanceToken.sol          
+│   |--- FreelanceMarketplace.sol
+|
+|--- scripts/
+│   |--- deploy.js  
+|                 
+|--- frontend/
+│   |---src/
+│   │   |--- App.jsx                 
+│   │   |--- ClientDashboard.jsx     
+│   │   |--- FreelancerDashboard.jsx 
+│   │   |--- web3Service.js          
+│   │   |--- main.jsx                
+│   │   |--- App.css     
+|   |         
+│   |--- index.html
+│   |--- vite.config.js
+│   |--- package.json
+\
+|--- hardhat.config.js
+|--- package.json
 ```
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 
@@ -52,8 +56,6 @@ FreelanceX/
 ### Step 1: Clone and Setup Backend (Smart Contracts)
 
 ```bash
-# Create project directory
-mkdir FreelanceX
 cd FreelanceX
 
 # Initialize Hardhat project
@@ -61,14 +63,7 @@ npm init -y
 npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox
 npm install @openzeppelin/contracts
 
-# Create directories
-mkdir contracts scripts
 
-# Copy the smart contracts
-# Place FreelanceToken.sol and FreelanceMarketplace.sol in contracts/
-# Place deploy.js in scripts/
-# Place hardhat.config.js in root
-```
 
 ### Step 2: Setup Frontend
 
@@ -88,18 +83,6 @@ npm install ethers@6
 # Create src directory structure
 mkdir src
 
-# Copy frontend files to appropriate locations:
-# - App.jsx, ClientDashboard.jsx, FreelancerDashboard.jsx, web3Service.js, main.jsx → src/
-# - App.css → src/
-# - index.html → root of frontend/
-# - vite.config.js → root of frontend/
-```
-
-## 🏃 Running the Project
-
-### Step 1: Start Hardhat Local Network
-
-Open a terminal in the project root:
 
 ```bash
 npx hardhat node
@@ -161,7 +144,7 @@ npm run dev
 
 The app will open at `http://localhost:3000`
 
-## 🎮 How to Use the DApp
+## How to Use the DApp
 
 ### Initial Setup
 
@@ -173,16 +156,16 @@ The app will open at `http://localhost:3000`
 
 1. Switch to **"Client Mode"**
 2. In the "Create New Project" section:
-   - Enter project title (e.g., "Build a React Website")
-   - Enter price in ETH (e.g., 0.5)
-   - Click "Create Project"
-   - Confirm transaction in MetaMask
+   Enter project title (e.g., "Build a React Website")
+   Enter price in ETH (e.g., 0.5)
+   Click "Create Project"
+   Confirm transaction in MetaMask
 3. Your project appears in "My Project History" with status "Pending"
 4. When a freelancer accepts it, status changes to "Assigned"
 5. Click **"Mark as Completed & Pay"** to:
-   - Send payment to freelancer
-   - Earn 10 FLX reward tokens
-   - Give freelancer 10 FLX reward tokens
+   Send payment to freelancer
+   Earn 10 FLX reward tokens
+   Give freelancer 10 FLX reward tokens
 
 ### As a Freelancer (Find Jobs)
 
@@ -207,40 +190,39 @@ To test the full flow:
 7. **Account 1:** Complete the project and pay
 8. Both accounts receive rewards!
 
-## 🔍 Key Features Demonstrated
+## Key Features 
 
 ### Smart Contract Features
 
-- ✅ ERC-20 token (FLX) for rewards
-- ✅ Project creation with ETH pricing
-- ✅ Project acceptance with client restriction (`require` check)
-- ✅ Project completion with automatic payment
-- ✅ Automatic reward minting for both parties
+ERC-20 token (FLX) for rewards
+Project creation with ETH pricing
+project acceptance with client restriction (`require` check)
+Project completion with automatic payment
+Automatic reward minting for both parties
 
 ### Frontend Features
 
-- ✅ MetaMask wallet integration
-- ✅ Role switching (Client/Freelancer views)
-- ✅ Real-time reward balance display
-- ✅ Project filtering based on user role
-- ✅ Simple, clean UI with minimal CSS
-- ✅ Plain JavaScript API (web3Service.js) for easy code reading
+MetaMask wallet integration
+Role switching (Client/Freelancer views)
+Real-time reward balance display
+Project filtering based on user role
+Simple, clean UI with minimal CSS
+Plain JavaScript API (web3Service.js) for easy code reading
 
-## 🐛 Troubleshooting
 
 ### "Wallet not connected" error
-- Make sure you clicked "Connect Wallet" and approved in MetaMask
-- Check that MetaMask is on "Hardhat Localhost" network
+Make sure you clicked "Connect Wallet" and approved in MetaMask
+Check that MetaMask is on "Hardhat Localhost" network
 
 ### "Transaction failed" error
-- Ensure Hardhat node is running (`npx hardhat node`)
-- Check you have enough ETH in your account
-- For client: You can't accept your own project
-- For completion: Make sure project is assigned first
+Ensure Hardhat node is running (`npx hardhat node`)
+Check you have enough ETH in your account
+For client: You can't accept your own project
+For completion: Make sure project is assigned first
 
 ### "Cannot read properties of undefined"
-- Verify contract addresses are correctly set in `web3Service.js`
-- Redeploy contracts if Hardhat node was restarted
+Verify contract addresses are correctly set in `web3Service.js`
+Redeploy contracts if Hardhat node was restarted
 
 ### Hardhat node restarted
 If you restart the Hardhat node, you must:
@@ -248,7 +230,6 @@ If you restart the Hardhat node, you must:
 2. Update `web3Service.js` with new addresses
 3. Reset MetaMask: Settings → Advanced → Clear activity tab data
 
-## 📝 Code Highlights for Presentation
 
 ### Key Security Features
 
@@ -270,44 +251,8 @@ require(msg.value >= project.price, "Insufficient payment");
 
 ### Separation of Concerns
 
-- **`web3Service.js`**: All blockchain logic in plain JavaScript
-- **React Components**: Just UI and simple state management
-- **No complex hooks**: Easy to read and understand
+**`web3Service.js`**: All blockchain logic in plain JavaScript
+**React Components**: Just UI and simple state management
+**No complex hooks**: Easy to read and understand
 
-## 🎓 Grading Checklist
 
-✅ Two smart contracts (Token + Marketplace)
-✅ ERC-20 token implementation
-✅ Project creation, acceptance, completion workflow
-✅ Security: Client cannot accept own project
-✅ Automatic reward distribution
-✅ React + Vite frontend
-✅ Role switching functionality
-✅ Clean separation: web3Service.js API
-✅ MetaMask integration
-✅ Professional UI with minimal CSS
-✅ Complete deployment instructions
-✅ Working on Hardhat localhost
-
-## 📚 Additional Notes
-
-- The project uses Ethers.js v6 syntax
-- All blockchain interactions are in `web3Service.js` for easy maintenance
-- The UI is intentionally simple to focus on functionality
-- Reward amount is set to 10 FLX per completed project
-- All code is well-commented for easy understanding
-
-## 🎉 Demo Flow for Presentation
-
-1. Show Hardhat node running with test accounts
-2. Deploy contracts and show addresses
-3. Open frontend and connect wallet
-4. Create a project as Client (show it in history)
-5. Switch to another MetaMask account
-6. Accept project as Freelancer
-7. Switch back to Client account
-8. Complete project and show payment + rewards
-9. Highlight reward balance increase for both accounts
-10. Explain the code structure and security features
-
-Good luck with your final exam! 🚀
